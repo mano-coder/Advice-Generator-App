@@ -17,21 +17,122 @@
   font-size: 62.5%;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
-
 body {
+  background-color: var(--blue-950);
   line-height: 1.5;
   min-height: 100vh;
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-weight: 400;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--blue-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.advice-container {
+  background-color: var(--blue-900);
+  width: 90%;
+  height: 44vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0 7rem rgba(0, 0, 0, 0.3);
+}
+
+#advice-title {
+  color: var(--green-300);
+  font-size: 1.5rem;
+  text-decoration: unset;
+  letter-spacing: 1.3px;
+}
+
+#pattern-divider-mobile {
+  width: 90%;
+  transform: scale(1.1);
+}
+
+#pattern-divider-desktop {
+  display: none;
+}
+
+#generate-btn {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  background-color: var(--green-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.1s ease-in-out;
+}
+
+#generate-btn:hover {
+  filter: drop-shadow(0 0 1rem var(--green-300));
+}
+
+#generate-btn img {
+  transform: scale(1);
 }
 
 .attribution {
+  position: absolute;
+  bottom: 1rem;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 375px) {
+  .advice-container {
+    height: 50vh;
+  }
+  #advice-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .advice-container {
+    width: 35%;
+    height: 40vh;
+  }
+  #advice-text {
+    font-size: 1.8rem;
+  }
+
+  #advice-title {
+    font-size: 1.5rem;
+  }
+
+  #pattern-divider-desktop {
+    display: block;
+    width: 100%;
+  }
+  #generate-btn {
+    height: 4rem;
+    width: 4rem;
+  }
+  #generate-btn img {
+    transform: scale(0.7);
+  }
+  #pattern-divider-mobile {
+    display: none;
+  }
 }
