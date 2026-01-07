@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -24,20 +23,14 @@
       <p id="advice-title">Advice #<span id="advice-id"></span></p>
       <p id="advice-text">
       </p>
-      <img
-          id="pattern-divider-desktop"
-          src="./images/pattern-divider-desktop.svg"
-          ></img>
-      <img
-          id="pattern-divider-mobile"
-          src="./images/pattern-divider-mobile.svg"
-          ></img>
+      <picture>
+        <source media="(min-width: 768px)" srcset="./images/pattern-divider-desktop.svg">
+        <img id="pattern-divider" src="./images/pattern-divider-mobile.svg" alt="divider">
+      </picture>
       <button id="generate-btn">
         <img src="./images/icon-dice.svg" alt="icon-dice"></img>
       </button>
     </div>
-
-    <!-- Advice text goes here -->
 
     <div class="attribution">
       Challenge by
