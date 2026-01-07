@@ -32,8 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/mano-coder/advice-generator-app](https://www.google.com/search?q=https://github.com/mano-coder/advice-generator-app)
-- Live Site URL: [https://mano-coder.github.io/advice-generator-app/](https://www.google.com/search?q=https://mano-coder.github.io/advice-generator-app/)
+- Live Site URL: [https://mano-coder.github.io/advice-generator-app/](https://mano-coder.github.io/Advice-Generator-App/)
 
 ## My process
 
