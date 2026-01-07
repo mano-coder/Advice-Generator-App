@@ -6,15 +6,22 @@ const link = "https://api.adviceslip.com/advice";
 
 const getData = async () => {
   generateBtn.disabled = true;
+  adviceText.classList.add("loading");
+  adviceId.classList.add("loading");
+
   adviceText.textContent = "Loading wisdom...";
   adviceId.textContent = "...";
   try {
     const res = await fetch(`${link}?${Date.now()}`);
     const data = await res.json();
 
+    adviceText.classList.remove("loading");
+    adviceId.classList.remove("loading");
     generateAdvice(data.slip);
   } catch (err) {
     console.error(err);
+  } finally {
+    generateBtn.disabled = false;
   }
 };
 

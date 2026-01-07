@@ -99,6 +99,30 @@ body {
   color: var(--green-300);
 }
 
+/* Add Loading Animation */
+@keyframes shimmer {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.loading {
+  animation: shimmer 1.5s infinite;
+  color: #aaa !important;
+  font-style: italic;
+}
+
+#generate-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
 @media (min-width: 375px) {
   .advice-container {
     height: 50vh;
