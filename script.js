@@ -25,7 +25,7 @@ const getData = async () => {
   }
 };
 
-const generateAdvice = async (data) => {
+const generateAdvice = (data) => {
   adviceId.textContent = data.id;
   adviceText.textContent = `"${data.advice}"`;
 };
