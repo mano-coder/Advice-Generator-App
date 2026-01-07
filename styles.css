@@ -96,7 +96,7 @@ body {
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--green-300);
 }
 
 @media (min-width: 375px) {
@@ -116,11 +116,9 @@ body {
   #advice-text {
     font-size: 1.8rem;
   }
-
   #advice-title {
     font-size: 1.5rem;
   }
-
   #pattern-divider-desktop {
     display: block;
     width: 100%;

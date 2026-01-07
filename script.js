@@ -4,16 +4,25 @@ const generateBtn = document.getElementById("generate-btn");
 
 const link = "https://api.adviceslip.com/advice";
 
-let id = 0;
-
 const getData = async () => {
+  generateBtn.disabled = true;
+  adviceText.textContent = "Loading wisdom...";
+  adviceId.textContent = "...";
   try {
-    const res = await fetch(link);
+    const res = await fetch(`${link}?${Date.now()}`);
     const data = await res.json();
-    console.log(data);
+
+    generateAdvice(data.slip);
   } catch (err) {
-    alert(`Error: ${err}`);
+    console.error(err);
   }
 };
+
+const generateAdvice = async (data) => {
+  adviceId.textContent = data.id;
+  adviceText.textContent = `"${data.advice}"`;
+};
+
+generateBtn.addEventListener("click", getData);
 
 getData();
