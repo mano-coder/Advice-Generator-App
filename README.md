@@ -50,20 +50,23 @@ Users should be able to:
 One of the major learnings in this project was handling API-side caching. The Advice Slip API has a 2-second cache window. To ensure the user gets a fresh piece of advice every time they click the button, I implemented a "cache-buster" by appending a timestamp to the URL.
 
 I also learned how to use the finally block in asynchronous functions to ensure the UI state (like re-enabling buttons) is reset regardless of the request outcome.
-
+```css
 @keyframes shimmer {  
 0% { opacity: 0.5; }  
 50% { opacity: 1; }  
 100% { opacity: 0.5; }  
 }  
-<br/>.loading {  
+
+.loading {  
 animation: shimmer 1.5s infinite;  
 }  
-
+```
+```javascript
 const getData = async () => {  
 generateBtn.disabled = true;  
 adviceText.classList.add("loading");  
-<br/>try {  
+
+try {  
 // Unique URL to bypass 2-second API caching  
 const res = await fetch(\`\${link}?t=\${Date.now()}\`);  
 const data = await res.json();  
@@ -76,7 +79,7 @@ adviceText.classList.remove("loading");
 generateBtn.disabled = false;  
 }  
 };  
-
+```
 ### Continued development
 
 In future projects, I want to continue focusing on:
